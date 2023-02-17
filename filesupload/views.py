@@ -35,6 +35,5 @@ def upload_multiple_files(request):
                     name=name,
                     images=image
                     )
-            # photo.save()
         # return HttpResponse('Files uploaded')
     return render(request, 'multiple.html')
