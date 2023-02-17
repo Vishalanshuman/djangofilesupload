@@ -31,9 +31,9 @@ def upload_multiple_files(request):
         name = request.POST.get('name')
         images = request.POST.getlist('images')
         for image in images:
-            photo= PhotoAlbum.objects.create(
+            PhotoAlbum.objects.create(
                     name=name,
                     images=image
                     )
-        # return HttpResponse('Files uploaded')
+        return HttpResponse('Files uploaded')
     return render(request, 'multiple.html')
